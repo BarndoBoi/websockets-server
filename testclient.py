@@ -15,7 +15,7 @@ async def listen(websocket):
                 print(event['user'] + " has connected")
         
         if event['type'] == 'chat':
-            print(event['message'])
+            print(event['user'] + ": " + event['message'])
 
 async def chat(websocket):
     while True:
